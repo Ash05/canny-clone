@@ -1,0 +1,1 @@
+-- Add status column to feedback table\nALTER TABLE feedback ADD COLUMN status VARCHAR(50) DEFAULT 'pending';\n\n-- Update existing records to use the default value\nUPDATE feedback SET status = 'pending' WHERE status IS NULL;
